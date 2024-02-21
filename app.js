@@ -30,7 +30,15 @@ function Criptografar() {
 
     //Transforma a array em string para poder retornar.
     texto = letras.toString();
-    texto = texto.replace(/,/g, '')
+    texto = texto.replace(/,/g, '');
+    let imagem = document.getElementById("fotonice");
+    let h2 = document.getElementById("niceh2");
+    let p = document.getElementById("nicep");
+    imagem.className = "disabled";
+    h2.className = "disabled";
+    p.className = "disabled";
+    h2.textContent = texto
+    h2.className = "luz";
     document.getElementById("texto").value = texto;
 }
 
@@ -59,5 +67,13 @@ function Descriptografar() {
     }
     texto = letras.toString();
     texto = texto.replace(/,/g, '')
+    let imagem = document.getElementById("fotonice");
+    let h2 = document.getElementById("niceh2");
+    let p = document.getElementById("nicep");
+    imagem.className = "disabled";
+    h2.className = "disabled";
+    p.className = "disabled";
+    h2.textContent = texto
+    h2.className = "luz";
     document.getElementById("texto").value = texto;
 }
